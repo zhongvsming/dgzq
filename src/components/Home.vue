@@ -82,7 +82,160 @@
                 <a href="">立即下载</a>
             </div>
         </div>
-      
+        <!-- 9卡片区域 -->
+        <div class="nine">
+            <ul>
+                <li>
+                    <div class="pic-box"><img src="https://media.dgzq.com.cn/app/file/getImg?group=group1&name=TTAwLzAwLzRBL3JCSWFtMXc3Nk0tQVhlYTJBQURxZEtSSXdnVTYwNi5wbmc" alt=""></div>
+                    <div class="text-box">
+                        <h5>智能投顾</h5>
+                        <h4>智能投顾 财富小宝</h4>
+                        <span class="line"></span>
+                        <p>AI金融智能投顾，提供超过20种自动化专业服务，助您精准投资一臂之力</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="text-box">
+                        <h5>专业投资顾问</h5>
+                        <h4>投顾热评 市场动态</h4>
+                        <span class="line"></span>
+                        <p>数百名专业资深投顾，全程盯盘直播，遨游股市，一路护航</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="text-box">
+                        <h5>热门股票组合</h5>
+                        <h4>精选组合策略</h4>
+                        <span class="line"></span>
+                        <p>专业、专属、高效的业务团队，为客户量身定制个性化的股票组合策略</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="pic-box"><img src="https://media.dgzq.com.cn/app/file/getImg?group=group1&name=TTAwLzAwLzQ0L3JCUWFtMXc4WjdDQVIwZU5BQURwZGdvTDRJODAxMy5wbmc" alt=""></div>
+                    <div class="text-box">
+                        <h5>港股淘金大利器</h5>
+                        <h4>港股level-2</h4>
+                        <span class="line"></span>
+                        <p>实时提供港股十档行情，看港股，不延时，限时限量免费领取</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="text-box">
+                        <h5>专业主播 每日播报</h5>
+                        <h4>有财早播报</h4>
+                        <span class="line"></span>
+                        <p>汇聚每日最新的宏观要闻、行业动态、公司公告，了解行业最新资讯</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="text-box">
+                        <h5>全新服务 助您致富</h5>
+                        <h4>研报速递</h4>
+                        <span class="line"></span>
+                        <p>汇集资深权威研究人员，覆盖重要行业数据，用心为客户打造证券财富之巅</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="text-box">
+                        <h5>天添有金喜</h5>
+                        <h4>天添金</h4>
+                        <span class="line"></span>
+                        <p>所有交易0费用，随时买卖巨灵活，5秒理财很快捷，收益稳定超省心，足额兑现有保障</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 4按钮区域 -->
+        <div class="four">
+            <ul>
+                <li>
+                    <a href="">
+                        <span></span>
+                        <h4>投资者教育</h4>
+                        <p>证券知识，交易规则，风险提示等理性投资，由我做起</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span></span>
+                        <h4>营业网点</h4>
+                        <p>数十家分支机构遍布全国联系您身边的财富管理专家</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span></span>
+                        <h4>党务专栏</h4>
+                        <p>新时代 新征程 新东证 全面贯彻党的十九大精神</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span></span>
+                        <h4>企业责任</h4>
+                        <p>肩负重任 与爱同行 践行社会责任，公益时刻在路上</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 底部区域 -->
+        <div class="bottom">
+            <div class="footer-box">
+                <div class="footer-inner">
+                    <div class="logo">东莞证券</div>
+                    <div class="service">
+                        <a href="">在线客服与建议</a>
+                        <a href="">95328</a>
+                        <p>官方客服 竭诚服务</p>
+                        <p><a href="">免责条款</a></p>
+                    </div>
+                    <div class="ft-nav">
+                        <h4>业务支持</h4>
+                        <ul>
+                            <li>在线交易</li>
+                            <li>网上打新</li>
+                            <li>企业邮箱</li>
+                            <li>东证锦信</li>
+                        </ul>
+                    </div>
+                    <div class="ft-nav">
+                        <h4>业务支持</h4>
+                        <ul>
+                            <li>在线交易</li>
+                            <li>网上打新</li>
+                            <li>企业邮箱</li>
+                            <li>东证锦信</li>
+                        </ul>
+                    </div>
+                    <div class="ft-nav">
+                        <h4>业务支持</h4>
+                        <ul>
+                            <li>在线交易</li>
+                            <li>网上打新</li>
+                            <li>企业邮箱</li>
+                            <li>东证锦信</li>
+                        </ul>
+                    </div>
+                    <div class="ft-nav">
+                        <h4>业务支持</h4>
+                        <ul>
+                            <li>在线交易</li>
+                            <li>网上打新</li>
+                            <li>企业邮箱</li>
+                            <li>东证锦信</li>
+                        </ul>
+                    </div>
+                    <div class="ft-code">
+                        <h4>东莞证券官方微信</h4>
+                        <div><img src="https://new.dgzq.com.cn/dz-ow/pcfront/img/ft_code.7459285.png" alt="" width="86px" height="86px"></div>
+                    </div>
+                </div>
+                <div class="copy-right">
+
+                </div>
+            </div>
+            
+        </div>
 
     </div>
 </template>
@@ -147,7 +300,7 @@
     a{
         text-decoration: none;
     }
-    border: 1px pink solid;
+    // border: 1px pink solid;
     .title-left{
         height: 75px;
         display: flex;
@@ -317,8 +470,177 @@
           }
       }
   }
-
-
+  .nine{
+      width:100%;
+    //   background-image:url("../assets/00002.jpg"); 
+        background: gray;
+        padding-top:50px;
+      ul{
+          width: 1200px;
+          height: 1100px;
+          margin: 0 auto;
+          padding: 0;
+          li{
+              float:left;
+              margin:11px 0 11px 0;
+              .text-box{
+                  width: 305px;
+                  height: 294px;
+                  display: inline-block;
+                  vertical-align: top;
+                  padding:40px 40px 0 40px;
+                  text-align: left;
+                  background: white;
+                  h5{
+                      font-size: 16px;
+                      color: #b28147;
+                      padding-bottom: 32px;
+                      line-height: 22xp;
+                      margin:0;
+                  }
+                  h4{
+                      font-size: 24px;
+                      line-height: 33px;
+                      color:#333;
+                      font-weight: 400;
+                      margin: 0;
+                      padding:0;
+                  }
+                  .line{
+                      display: block;
+                      width: 50px;
+                      height: 1px;
+                      margin: 18px 0 16px 0;
+                      background: #b28147;
+                  }
+                  p{
+                      font-size: 14px;
+                  }
+              }
+          }
+          li:nth-child(1){
+              width: 790px;
+              height: 330px;
+              margin-right: 22px;
+              .pic-box{
+                  width: 400px;
+                  overflow: hidden;
+                  display: inline-block;
+              } 
+          }
+          li:nth-child(4){
+              width: 790px;
+              height: 330px;
+              margin-left: 22px;
+              .pic-box{
+                  width: 400px;
+                  overflow: hidden;
+                  display: inline-block;
+              } 
+          }
+          li:nth-child(3){
+             height: 294px;
+          }
+          li:nth-child(5){
+             height: 294px;
+             margin-right:22px;
+          }
+          li:nth-child(6){
+             margin-right:22px;
+          }
+      }
+  }
+  .four{
+      height: 290px;
+      ul{
+          width: 1200px;
+          padding:40px 0;
+          margin: 0 auto;
+          li{
+              width: 25%;
+              float:left;
+              a{
+                  display: block;
+                  text-align: center;
+                  padding:20px 40px 24px;
+                  h4{
+                      font-size: 18px;
+                      line-height: 25px;
+                      color: #333;
+                      font-weight: 400;
+                      padding: 0;
+                      margin:0;
+                  }
+                  p{
+                      font-size: 14px;
+                      color:#999;
+                      line-height: 20px;
+                      margin: 0;
+                      padding-top:6px;
+                  }
+              }
+          }
+          li:nth-child(1){
+              span{
+                      height: 95px;
+                      display: block;
+                      background: url('../assets/1.png') center  center no-repeat
+                  }
+          }
+          li:nth-child(2){
+              span{
+                      height: 95px;
+                      display: block;
+                      background: url('../assets/0.png') center  center no-repeat
+                  }
+          }
+          li:nth-child(3){
+              span{
+                      height: 95px;
+                      display: block;
+                      background: url('../assets/2.png') center  center no-repeat
+                  }
+          }
+          li:nth-child(4){
+              span{
+                      height: 95px;
+                      display: block;
+                      background: url('../assets/3.png') center  center no-repeat
+                  }
+          }
+      }
+  }
+  .bottom{
+      width: 100%;
+      height: 300px;
+      background: #242a37;
+      .footer-box{
+          width: 1200px;
+          padding: 40px 0 25px;
+          margin: 0 auto;
+          .footer-inner{
+              @include display-flex(space-around);
+              color:white;
+                .logo{
+                    width: 100px;
+                    height: 100px;
+                    //   float: left;
+                }
+                .service{
+                    width: 100px;
+                    height: 150px;
+                    //   float: left;
+                }
+                .ft-nav{
+                    //   float: left;
+                }
+                .ft-code{
+                    //   float:left;
+                }
+          }
+          
+      }
+  }  
 
 }
 
