@@ -1,12 +1,13 @@
 <template>
-    <div class="home-container">
+    <div id="home-container" class="home-container">
         <!-- 标题导航栏 -->
-        <div class="title">
-            <div class="title-left">
-                <img src="../assets/untitled.png" alt="">
+        <div class="title-bg">
+            <div class="title">
+            <div id="title-logo" class="title-left" :class="{'title-left-collapse':titleCollapse}">
+                <!-- <img id="title-logo" src="../assets/untitled.png" alt=""> -->
             </div>
             <div class="title-right">
-                <div class="link">
+                <div id="title-link" class="link" :class="{'link-collapse':titleCollapse}">
                     <ul>
                         <li><a href="">旧版官网</a></li>
                         <li><a href="">在线客服</a></li>
@@ -15,7 +16,46 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="">首页</a></li>
+                        <li @mouseleave="unShowTitleNav">
+                            <a id="shouye" href="" @click.prevent="" @mouseenter="showTitleNav">首页</a>
+                            <div id="business_menu" class="business_menu">
+                                <div class="business_nav">
+                                    <a href=""><h4>大经纪</h4></a>
+                                    <ul>
+                                        <a href=""><li>融资融券</li></a>
+                                        <a href=""><li>产品信息披露</li></a>
+                                        <a href=""><li>期货IB业务</li></a>
+                                        <a href=""><li>股票期权</li></a>
+                                        <a href=""><li>港股通</li></a>
+                                    </ul>
+                                </div>
+                                <div class="business_nav">
+                                    <a href=""><h4>大资管</h4></a>
+                                    <ul>
+                                        <a href=""><li>资产管理</li></a>
+                                        <a href=""><li>集合理财</li></a>
+                                        <a href=""><li>单一理财</li></a>
+                                        <a href=""><li>资管资讯</li></a>
+                                        <a href=""><li>投资者教育</li></a>
+                                        <a href=""><li>投研团队</li></a>
+                                    </ul>
+                                </div>
+                                <div class="business_nav">
+                                    <a href=""><h4>大投行</h4></a>
+                                    <ul>
+                                        <a href=""><li>团队介绍</li></a>
+                                        <a href=""><li>信息披露</li></a>
+                                        <a href=""><li>网下打新</li></a>
+                                        <a href=""><li>上市融资</li></a>
+                                        <a href=""><li>债券融资</li></a>
+                                        <a href=""><li>新三板</li></a>
+                                    </ul>
+                                </div>
+                                <div class="business_nav">
+                                    <a href=""><h4>东证锦信</h4></a>
+                                </div>
+                            </div>
+                        </li>
                         <li><a href="">公司业务</a></li>
                         <li><a href="">有财资讯</a></li>
                         <li><a href="">投资者教育</a></li>
@@ -25,8 +65,9 @@
                 </div>
             </div>
         </div>
+        </div>
         <!-- 轮播图区域 -->
-        <div class="banner">
+        <div id="banner" class="banner" :class="{'banner-collapse':titleCollapse}">
             <el-carousel height="470px">
                 <el-carousel-item v-for="item in bannerImage" :key="item.url">
                     <img :src="item.url" alt="图片无法显示">
@@ -52,9 +93,11 @@
         <div class="notice">
             <ul>
                 <li v-for="item of cards" :key="item.id">
-                    <img :src="item.img" alt="" >
-                    <h4>{{item.name}}</h4>
-                    <p>{{item.content}}</p>
+                    <a href="">
+                        <img :src="item.img" alt="" >
+                        <h4>{{item.name}}</h4>
+                        <p>{{item.content}}</p>
+                    </a> 
                 </li>
             </ul>
             <div class="notice-box">
@@ -86,62 +129,84 @@
         <div class="nine">
             <ul>
                 <li>
-                    <div class="pic-box"><img src="https://media.dgzq.com.cn/app/file/getImg?group=group1&name=TTAwLzAwLzRBL3JCSWFtMXc3Nk0tQVhlYTJBQURxZEtSSXdnVTYwNi5wbmc" alt=""></div>
-                    <div class="text-box">
-                        <h5>智能投顾</h5>
-                        <h4>智能投顾 财富小宝</h4>
-                        <span class="line"></span>
-                        <p>AI金融智能投顾，提供超过20种自动化专业服务，助您精准投资一臂之力</p>
-                    </div>
+                    <a href="">
+                        <div class="pic-box"><img src="https://media.dgzq.com.cn/app/file/getImg?group=group1&name=TTAwLzAwLzRBL3JCSWFtMXc3Nk0tQVhlYTJBQURxZEtSSXdnVTYwNi5wbmc" alt=""></div>
+                        <div class="text-box">
+                            <h5>智能投顾</h5>
+                            <h4>智能投顾 财富小宝</h4>
+                            <span class="line"></span>
+                            <p>AI金融智能投顾，提供超过20种自动化专业服务，助您精准投资一臂之力</p>
+                            <a href="">立即体验</a>
+                        </div>
+                    </a>
+                    
                 </li>
                 <li>
-                    <div class="text-box">
-                        <h5>专业投资顾问</h5>
-                        <h4>投顾热评 市场动态</h4>
-                        <span class="line"></span>
-                        <p>数百名专业资深投顾，全程盯盘直播，遨游股市，一路护航</p>
-                    </div>
+                    <a href="">
+                        <div class="text-box">
+                            <h5>专业投资顾问</h5>
+                            <h4>投顾热评 市场动态</h4>
+                            <span class="line"></span>
+                            <p>数百名专业资深投顾，全程盯盘直播，遨游股市，一路护航</p>
+                            <a href="">立即体验</a>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="text-box">
+                   <a href="">
+                        <div class="text-box">
                         <h5>热门股票组合</h5>
                         <h4>精选组合策略</h4>
                         <span class="line"></span>
                         <p>专业、专属、高效的业务团队，为客户量身定制个性化的股票组合策略</p>
+                        <a href="">立即体验</a>
                     </div>
+                   </a>
                 </li>
                 <li>
-                    <div class="pic-box"><img src="https://media.dgzq.com.cn/app/file/getImg?group=group1&name=TTAwLzAwLzQ0L3JCUWFtMXc4WjdDQVIwZU5BQURwZGdvTDRJODAxMy5wbmc" alt=""></div>
-                    <div class="text-box">
-                        <h5>港股淘金大利器</h5>
-                        <h4>港股level-2</h4>
-                        <span class="line"></span>
-                        <p>实时提供港股十档行情，看港股，不延时，限时限量免费领取</p>
-                    </div>
+                    <a href="">
+                        <div class="pic-box"><img src="https://media.dgzq.com.cn/app/file/getImg?group=group1&name=TTAwLzAwLzQ0L3JCUWFtMXc4WjdDQVIwZU5BQURwZGdvTDRJODAxMy5wbmc" alt=""></div>
+                        <div class="text-box">
+                            <h5>港股淘金大利器</h5>
+                            <h4>港股level-2</h4>
+                            <span class="line"></span>
+                            <p>实时提供港股十档行情，看港股，不延时，限时限量免费领取</p>
+                            <a href="">立即体验</a>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="text-box">
+                   <a href="">
+                        <div class="text-box">
                         <h5>专业主播 每日播报</h5>
                         <h4>有财早播报</h4>
                         <span class="line"></span>
                         <p>汇聚每日最新的宏观要闻、行业动态、公司公告，了解行业最新资讯</p>
+                        <a href="">立即体验</a>
                     </div>
+                   </a>
                 </li>
                 <li>
-                    <div class="text-box">
-                        <h5>全新服务 助您致富</h5>
-                        <h4>研报速递</h4>
-                        <span class="line"></span>
-                        <p>汇集资深权威研究人员，覆盖重要行业数据，用心为客户打造证券财富之巅</p>
-                    </div>
+                  <a href="">
+                        <div class="text-box">
+                            <h5>全新服务 助您致富</h5>
+                            <h4>研报速递</h4>
+                            <span class="line"></span>
+                            <p>汇集资深权威研究人员，覆盖重要行业数据，用心为客户打造证券财富之巅</p>
+                            <a href="">立即体验</a>
+                        </div>
+                  </a>
                 </li>
                 <li>
-                    <div class="text-box">
-                        <h5>天添有金喜</h5>
-                        <h4>天添金</h4>
-                        <span class="line"></span>
-                        <p>所有交易0费用，随时买卖巨灵活，5秒理财很快捷，收益稳定超省心，足额兑现有保障</p>
-                    </div>
+                   <a href="">
+                        <div class="text-box">
+                            <h5>天添有金喜</h5>
+                            <h4>天添金</h4>
+                            <span class="line"></span>
+                            <p>所有交易0费用，随时买卖巨灵活，5秒理财很快捷，收益稳定超省心，足额兑现有保障</p>
+                            <a href="">立即体验</a>
+                        </div>
+                   </a>
                 </li>
             </ul>
         </div>
@@ -187,42 +252,48 @@
                         <a href="">在线客服与建议</a>
                         <a href="">95328</a>
                         <p>官方客服 竭诚服务</p>
-                        <p><a href="">免责条款</a></p>
+                        <p><a href="" id="mianze">免责条款</a></p>
                     </div>
                     <div class="ft-nav">
                         <h4>业务支持</h4>
                         <ul>
-                            <li>在线交易</li>
-                            <li>网上打新</li>
-                            <li>企业邮箱</li>
-                            <li>东证锦信</li>
+                            <li><a href="">在线交易</a></li>
+                            <li><a href="">网上打新</a></li>
+                            <li><a href="">企业邮箱</a></li>
+                            <li><a href="">东证锦信</a></li>
+
                         </ul>
                     </div>
                     <div class="ft-nav">
-                        <h4>业务支持</h4>
+                        <h4>友情链接</h4>
                         <ul>
-                            <li>在线交易</li>
-                            <li>网上打新</li>
-                            <li>企业邮箱</li>
-                            <li>东证锦信</li>
+                            <li><a href="">上海证券交易所</a></li>
+                            <li><a href="">中国证监会</a></li>
+                            <li><a href="">中国证监协会</a></li>
+                            <li><a href="">深圳证券交易所</a></li>
+                            <li><a href="">更多...</a></li>
+
+
                         </ul>
                     </div>
                     <div class="ft-nav">
-                        <h4>业务支持</h4>
+                        <h4>走进我们</h4>
                         <ul>
-                            <li>在线交易</li>
-                            <li>网上打新</li>
-                            <li>企业邮箱</li>
-                            <li>东证锦信</li>
+                            <li><a href="">关于我们</a></li>
+                            <li><a href="">营业网点</a></li>
+                            <li><a href="">联系我们</a></li>
+                            <li><a href="">招贤纳士</a></li>
+
                         </ul>
                     </div>
                     <div class="ft-nav">
-                        <h4>业务支持</h4>
+                        <h4>客户服务</h4>
                         <ul>
-                            <li>在线交易</li>
-                            <li>网上打新</li>
-                            <li>企业邮箱</li>
-                            <li>东证锦信</li>
+                            <li><a href="">从业人员查询</a></li>
+                            <li><a href="">投资者教育基地</a></li>
+                            <li><a href="">销售产品信息披露</a></li>
+                            <li><a href="">业务公告</a></li>
+
                         </ul>
                     </div>
                     <div class="ft-code">
@@ -236,6 +307,7 @@
             </div>
             
         </div>
+        
 
     </div>
 </template>
@@ -267,8 +339,45 @@
                     {id:0,content1:'关于2019年劳动节期间港股通交易日安排的通知',data1:'2019-04-24',content2:'一心堂(002727):公开发行可转换公司债券发行提示性公告',data2:'2019-04-23'},
                     {id:1,content1:'康泰生物(300601):关于可转换公司债券赎回实施的第七次公告',data1:'2019-04-24',content2:'广东证监局温馨提示',data2:'2019-04-23'},
                     {id:2,content1:'东莞证券股份有限公司非公开发行2017年次级债券（第一期）付息公告',data1:'2019-04-24',content2:'关于2019年劳动节期间港股通交易日安排的通知',data2:'2019-04-23'}
-                ]
+                ],
+                titleCollapse:false
             }
+        },
+        methods:{
+            tCollapse(){
+                var vm = this;
+                document.body.onscroll = function(){
+                    // console.log("html scrollTop="+document.documentElement.scrollTop);
+                    // console.log("body scrollTop="+document.body.scrollTop);
+                    if(document.documentElement.scrollTop>50){
+                        console.log(">50 true");
+                        if(!vm.titleCollapse){
+                            console.log("this.titleCollapse=true");
+                            // console.log(this);
+                            vm.titleCollapse = true;
+                        }
+                    }else{
+                        console.log(">50 false");
+
+                        if(vm.titleCollapse){
+                        console.log("this.titleCollapse=false");
+
+                            vm.titleCollapse=false;
+                        }
+                    }
+                }
+            },
+            showTitleNav(){
+                // alert("mouseenter");
+                document.getElementById("business_menu").style.display = "block";
+            },
+            unShowTitleNav(){
+                document.getElementById("business_menu").style.display = "none";
+            }
+        },
+        created(){
+            this.tCollapse();
+            this.tNav();
         }
     }
 </script>
@@ -286,68 +395,151 @@
     li{
        list-style: none;
     }
-  .title{
-    width:1200px;
-    height: 70px;
-    margin:0 auto;
-
-    @include display-flex(space-between);
-    ul{
-        @include display-flex(space-between);
-        // margin: 5px;
-        @include clear();
-    }
-    a{
-        text-decoration: none;
-    }
-    // border: 1px pink solid;
-    .title-left{
-        height: 75px;
-        display: flex;
-        align-items: center;
-    }
-    .title-right{
-        position:relative;
-        .link{
-            width: 250px;
-            position: absolute;
+    .title-bg{
+        background: white;
+        z-index: 100;
+         position: fixed;
+            z-index: 100;
+            top:0;
+            left: 0;
             right: 0;
-            li{
-                margin:2px 0;
-                &:nth-child(2){
-                    border-left: 1px #d8d8d8 solid; 
-                }
-                &:nth-child(3){
-                    border-left: 1px #d8d8d8 solid; 
-                }
-                a{
-                    font-size: 14px;
-                    padding: 0px 0px 0px 20px;
-                    color: #999; 
-                }
-            }
-        }
-        .nav{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            // border: 1px red solid;
-            width: 650px;
+        .title{
+            width:1200px;
+            // height: 70px;
+            margin:0 auto;
+   
+            @include display-flex(space-between);
             ul{
-                li{
-                padding:0 0 0 40px;
-                    a{
-                        display: block;
-                        font-size: 16px;
-                        padding: 13px 0;
-                    }
-             }
+                @include display-flex(space-between);
+                @include clear();
             }
-            
-           
-        }
+            a{
+                text-decoration: none;
+            }
+            // border: 1px pink solid;
+            .title-left{
+                width: 132px;
+                height: 42px;
+                margin: auto 0;
+                background: url("../assets/untitled.png");
+                background-size: 100% 100%;
+                transition:all 2s;
+                }
+                .title-left-collapse{
+                    width: 90px;
+                    height: 35px;
+                    margin:auto 0;
+                }
+            .title-right{
+                position:relative;
+                .link-collapse{
+                    height: 0 !important;
+                }
+                .link{
+                    width: 650px;
+                    height: 23px;
+                    overflow: hidden;
+                    // position: absolute;
+                    // float:right;
+                    right: 0;
+                    text-align: right;
+                    transition:all 2s;
+
+                    ul{
+                        width: 250px;
+                        float: right;
+                        li{
+                                margin:2px 0;
+                                &:nth-child(2){
+                                    border-left: 1px #d8d8d8 solid; 
+                                }
+                                &:nth-child(3){
+                                    border-left: 1px #d8d8d8 solid; 
+                                }
+                                a{
+                                    font-size: 14px;
+                                    padding: 0px 0px 0px 20px;
+                                    color: #999; 
+                                }
+                            }
+                    }
+                
+                }
+                .nav{
+                    bottom: 0;
+                    right: 0;
+                    width: 650px;
+                    ul{
+                        li{
+                        padding:0 0 0 40px;
+                            a{
+                                display: block;
+                                font-size: 16px;
+                                padding: 13px 0;
+                            }
+                    }
+                    }
+                    .business_menu_collapse{
+                        height: 0;
+                        overflow: hidden;
+                    }
+                    .business_menu{
+                        width: 1200px;
+                        height: 180px;
+                        border-top:1px #e9e9e9 solid;
+                        background: white;
+                        position: absolute;
+                        right:0px;
+                        // @include display-flex(space-around);
+                        display: none;
+                        transition: all .5s;
+                        .business_nav{
+                            width: 300px;
+                            float: left;
+                            &:nth-child(4){
+                                width: 200px;
+                            }
+                            a{
+                                display: block;
+                                padding:0;
+                                h4{
+                                    text-align: left;
+                                    height: 16px;
+                                    line-height: 16px;
+                                    font-size: 16px;
+                                    color:black;
+                                    padding:10px 0 0 40px;
+                                    margin: 20px 0 10px 0;
+                                }
+                            }
+                            ul{
+                                @include display-flex(left);
+                                flex-wrap: wrap;
+                                margin-left:30px;
+                               a{
+                                   display: block;
+                                    li{
+                                        //  width: 100px;
+                                        padding:10px;
+                                        font-size: 16px;
+                                        text-align: left;
+                                    }
+                               }
+                            }
+                        }
+                    }
+                
+                }
+            }
+        }  
     }
-}  
+  
+    .banner{
+        margin-top:70px;
+    }
+    .banner-collapse{
+        margin-top:47px !important;
+    }
     .index{
         width: 100%;
         background: #eee;
@@ -393,6 +585,17 @@
               border:1px solid #c49056;
               position: relative;
               padding: 28px 0 0 100px;
+              &:hover{
+                  h4{
+                        color:#e84230;
+                        font-size: 24px;
+                        transform: translateY(8px);
+                        transition: all 0.5s;
+                    }
+                   p{
+                       display: none;
+                   }
+              } 
               img{
                   width: 50px;
                   height: 50px;
@@ -467,6 +670,10 @@
               display: block;
               text-align: center;
               line-height: 34px;
+              &:hover{
+                  color: white;
+                  background: #cf1126;
+              }
           }
       }
   }
@@ -516,27 +723,67 @@
                   p{
                       font-size: 14px;
                   }
+                  a{
+                      width: 140px;
+                      height: 36px;
+                      color: white;
+                      font-size: 14px;
+                      transform: translateY(0);
+                      display: block;
+                      text-align: center;
+                      line-height: 36px;
+                      border: 1px #e84230 solid;
+                      opacity: 0;
+                      &:hover{
+                          background: #e84230;
+                      }
+                  }
               }
+              .pic-box{
+                  width: 400px;
+                  overflow: hidden;
+                  display: inline-block;
+              }
+              &:hover{
+                  .text-box{
+                      color:white;
+                      background: #222;
+                    //   transition: all 1s;
+
+                      h4{
+                          color: white;
+                      }
+                      a{
+                          opacity: 1;
+                          transform: translateY(100%);
+                          transition: all .3s;
+                        //   transform: translateY(0);
+                      }
+                  }
+                  .pic-box{
+                      overflow: hidden;
+                      img{
+                          transition: all 0.5s;
+                           transform: scale(1.1,1.1);
+                      }
+                  }
+              } 
           }
           li:nth-child(1){
               width: 790px;
               height: 330px;
               margin-right: 22px;
-              .pic-box{
-                  width: 400px;
-                  overflow: hidden;
-                  display: inline-block;
-              } 
+              
           }
           li:nth-child(4){
               width: 790px;
               height: 330px;
               margin-left: 22px;
-              .pic-box{
-                  width: 400px;
-                  overflow: hidden;
-                  display: inline-block;
-              } 
+            //   .pic-box{
+            //       width: 400px;
+            //       overflow: hidden;
+            //       display: inline-block;
+            //   } 
           }
           li:nth-child(3){
              height: 294px;
@@ -577,6 +824,11 @@
                       line-height: 20px;
                       margin: 0;
                       padding-top:6px;
+                  }
+              }
+              &:hover{
+                  h4{
+                      color:#e84230;
                   }
               }
           }
@@ -621,18 +873,56 @@
           .footer-inner{
               @include display-flex(space-around);
               color:white;
+                p{
+                    font-size: 14px;
+                    color:#888c94;
+                }
                 .logo{
                     width: 100px;
                     height: 100px;
-                    //   float: left;
+                    margin:auto 0;
+                    line-height: 100px;
+                    font-size:22px;
+                    font-weight: bold;
                 }
                 .service{
-                    width: 100px;
+                    width: 180px;
                     height: 150px;
-                    //   float: left;
+                    a:nth-child(1){
+                        font-size: 14px;
+                        color: white;
+                        display: block;
+                        margin-top:18.62px;
+                    }
+                    a:nth-child(2){
+                        height: 44px;
+                        font-size: 32px;
+                        color: white;
+                        display: block;
+                        margin:12px 0 11px;
+                    }
+                    #mianze{
+                        font-size: 14px;
+                        color:#888c94;
+                    }
                 }
                 .ft-nav{
-                    //   float: left;
+                    h4{
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                    ul{
+                        padding:0;
+
+                        li a{
+                            display: block;
+                            height: 26px;
+                            font-size: 14px;
+                            color:#666;
+                            text-align: left;
+                        }
+                        
+                    }
                 }
                 .ft-code{
                     //   float:left;
