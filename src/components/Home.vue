@@ -2,7 +2,7 @@
     <div id="home-container" class="home-container">
         
         <!-- 轮播图区域 -->
-        <div id="banner" class="banner" :class="{'banner-collapse':titleCollapse}">
+        <div id="banner" class="banner">
             <el-carousel height="470px">
                 <el-carousel-item v-for="item in bannerImage" :key="item.url">
                     <img :src="item.url" alt="图片无法显示">
@@ -28,7 +28,7 @@
         <div class="notice">
             <ul>
                 <li v-for="item of cards" :key="item.id">
-                    <a href="">
+                    <a href="" @click.prevent="go(item.id)">
                         <img :src="item.img" alt="" >
                         <h4>{{item.name}}</h4>
                         <p>{{item.content}}</p>
@@ -215,7 +215,23 @@
             }
         },
         methods:{
-            
+            go(which){
+                switch(which){
+                    case 0:
+                        // alert("ok");
+                        this.$router.push({ path: 'openaccount' });
+                        break;
+                    case 1:
+                        this.$router.push({ path: 'openaccount' });
+                        break;
+                    case 2:
+                        this.$router.push({ path: 'openaccount' });
+                        break;
+                    case 3:
+                        this.$router.push({ path: 'openaccount' });
+                        break;            
+                }
+            }
         },
        
     }

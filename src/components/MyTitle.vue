@@ -4,7 +4,6 @@
             <div class="title">
             <a href="" style="display:flex; align-item:center;">
                 <div id="title-logo" class="title-left" :class="{'title-left-collapse':titleCollapse}">
-                    <!-- <img id="title-logo" src="../assets/untitled.png" alt=""> -->
                 </div>
             </a>
             <div class="title-right">
@@ -99,7 +98,7 @@
 
 <script>
     export default {
-        name:'title',
+        name:'mytitle',
         data(){
             return {
                 titleCollapse:false
@@ -115,8 +114,6 @@
                             vm.titleCollapse = true;
                         }
                     }else{
-                        console.log(">50 false");
-
                         if(vm.titleCollapse){
                             vm.titleCollapse=false;
                         }
