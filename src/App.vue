@@ -2,17 +2,21 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <Title></Title>
     <Home></Home>
+    <Foot></Foot>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
+import Title from './components/Title.vue'
+import Foot from './components/Foot.vue'
 
 export default {
   name: 'app',
   components: {
-    Home
+    Home,Title,Foot
   }
 }
 </script>
