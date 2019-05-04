@@ -3,9 +3,11 @@
         <!-- 标题导航栏 -->
         <div class="title-bg">
             <div class="title">
-            <div id="title-logo" class="title-left" :class="{'title-left-collapse':titleCollapse}">
-                <!-- <img id="title-logo" src="../assets/untitled.png" alt=""> -->
-            </div>
+            <a href="" style="display:flex; align-item:center;">
+                <div id="title-logo" class="title-left" :class="{'title-left-collapse':titleCollapse}">
+                    <!-- <img id="title-logo" src="../assets/untitled.png" alt=""> -->
+                </div>
+            </a>
             <div class="title-right">
                 <div id="title-link" class="link" :class="{'link-collapse':titleCollapse}">
                     <ul>
@@ -16,8 +18,9 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li @mouseleave="unShowTitleNav">
-                            <a id="shouye" href="" @click.prevent="" @mouseenter="showTitleNav">首页</a>
+                        <li><a id="shouye" href="" @click.prevent="">首页</a></li>
+                        <li @mouseleave="unShowTitleNav('business_menu','gongsiyewu')">
+                            <a id="gongsiyewu" href="" @mouseenter="showTitleNav('business_menu','gongsiyewu','block')">公司业务</a>
                             <div id="business_menu" class="business_menu">
                                 <div class="business_nav">
                                     <a href=""><h4>大经纪</h4></a>
@@ -55,12 +58,39 @@
                                     <a href=""><h4>东证锦信</h4></a>
                                 </div>
                             </div>
+                            </li>
+                        <li class="nav-relative"  @mouseleave="unShowTitleNav('inner-bobao','youcaizixun')">
+                            <a id="youcaizixun" href="" @mouseenter="showTitleNav('inner-bobao','youcaizixun','list-item')">有财资讯 </a>
+                            <ul id="inner-bobao" class="inner-menu">
+                                <a href=""><li>研播速递</li></a>
+                                <a href=""><li>有财播报</li> </a>
+                            </ul>    
                         </li>
-                        <li><a href="">公司业务</a></li>
-                        <li><a href="">有财资讯</a></li>
-                        <li><a href="">投资者教育</a></li>
-                        <li><a href="">软件下载</a></li>
-                        <li><a href="">关于我们</a></li>
+                        <li>
+                            <a id="touzizhejiaoyu" href="">投资者教育</a>    
+                       </li>
+                        <li class="nav-relative" @mouseleave="unShowTitleNav('inner-download','ruanjianxiazai')">
+                            <a id="ruanjianxiazai" href="" @mouseenter="showTitleNav('inner-download','ruanjianxiazai','list-item')">软件下载</a>
+                            <ul id="inner-download" class="inner-menu">
+                                <a href=""><li>PC软件下载</li></a>
+                                <a href=""><li>APP软件下载</li> </a>
+                            </ul>    
+                        </li>
+                        <li class="nav-relative" @mouseleave="unShowTitleNav('inner-about','guanyuwomen')">
+                            <a id="guanyuwomen" href="" @mouseenter="showTitleNav('inner-about','guanyuwomen','list-item')">关于我们</a>
+                            <ul id="inner-about" class="inner-menu">
+                                <a href=""><li> 公司介绍</li></a>
+                                <a href=""><li>组织架构</li> </a>
+                                <a href=""><li>发展大事</li> </a>
+                                <a href=""><li>公司动态</li> </a>
+                                <a href=""><li>东证招标</li> </a>
+                                <a href=""><li>联系我们</li> </a>
+                                <a href=""><li>营业网点</li> </a>
+                                <a href=""><li>人才招聘</li> </a>
+                                <a href=""><li>企业党建</li> </a>
+                                <a href=""><li>社会责任</li> </a>
+                            </ul>   
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -103,7 +133,7 @@
             <div class="notice-box">
                 <span style="display:block;">最新公告</span>
                 <div class="notice-box-outer">
-                    <el-carousel height="60px" direction="vertical" :autoplay="false">
+                    <el-carousel height="60px" direction="vertical" :autoplay="true">
                         <el-carousel-item v-for="item of notice" :key="item.id">
                             <div class="notice-box-inner">
                                  <div><a href="">{{item.content1}} &nbsp;&nbsp;{{item.data1}}</a></div>
@@ -347,37 +377,31 @@
             tCollapse(){
                 var vm = this;
                 document.body.onscroll = function(){
-                    // console.log("html scrollTop="+document.documentElement.scrollTop);
-                    // console.log("body scrollTop="+document.body.scrollTop);
                     if(document.documentElement.scrollTop>50){
-                        console.log(">50 true");
                         if(!vm.titleCollapse){
-                            console.log("this.titleCollapse=true");
-                            // console.log(this);
                             vm.titleCollapse = true;
                         }
                     }else{
                         console.log(">50 false");
 
                         if(vm.titleCollapse){
-                        console.log("this.titleCollapse=false");
-
                             vm.titleCollapse=false;
                         }
                     }
                 }
             },
-            showTitleNav(){
-                // alert("mouseenter");
-                document.getElementById("business_menu").style.display = "block";
+            showTitleNav(attr1,attr2,attr3){
+                document.getElementById(attr1).style.display = attr3;
+                document.getElementById(attr2).style.color = "#e84230";
             },
-            unShowTitleNav(){
-                document.getElementById("business_menu").style.display = "none";
+            unShowTitleNav(attr1,attr2){
+                document.getElementById(attr1).style.display = "none";
+                document.getElementById(attr2).style.color = "black";
             }
         },
         created(){
             this.tCollapse();
-            this.tNav();
+            // this.tNav();
         }
     }
 </script>
@@ -470,6 +494,9 @@
                     right: 0;
                     width: 650px;
                     ul{
+                        .nav-relative{
+                            position: relative;
+                        }
                         li{
                         padding:0 0 0 40px;
                             a{
@@ -478,6 +505,9 @@
                                 padding: 13px 0;
                             }
                     }
+                    }
+                    #touzizhejiaoyu:hover{
+                        color: #e84230;
                     }
                     .business_menu_collapse{
                         height: 0;
@@ -492,7 +522,7 @@
                         right:0px;
                         // @include display-flex(space-around);
                         display: none;
-                        transition: all .5s;
+                        transition: all 1s;
                         .business_nav{
                             width: 300px;
                             float: left;
@@ -510,6 +540,9 @@
                                     color:black;
                                     padding:10px 0 0 40px;
                                     margin: 20px 0 10px 0;
+                                    &:hover{
+                                       color:#e84230;
+                                   }
                                 }
                             }
                             ul{
@@ -518,6 +551,9 @@
                                 margin-left:30px;
                                a{
                                    display: block;
+                                   &:hover{
+                                       color:#e84230;
+                                   }
                                     li{
                                         //  width: 100px;
                                         padding:10px;
@@ -528,7 +564,32 @@
                             }
                         }
                     }
-                
+                    .inner-menu{
+                        display: none;
+                        width: 100px;
+                        height: 80px;
+                        position: absolute;
+                        left:22px;
+                        top:45px;
+                        // display: list-item;
+                        list-style: none;
+                        background: white;
+                        z-index: 50;
+                        a{
+                            margin: 0;
+                            padding:0;
+                            &:hover{
+                                color: #e84230;
+                            }
+                            li{
+                                font-size: 14px;
+                                padding:15px 5px 5px 5px;
+                        }
+                        }
+                    }
+                     #inner-about{
+                        height: 400px;
+                    }
                 }
             }
         }  
