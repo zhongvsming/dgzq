@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <div id="education">
     <MyTitle></MyTitle>
-    <router-view></router-view>
     <Foot></Foot>
   </div>
 </template>
 
 <script>
-// import Home from './components/Home.vue'
+
+import Foot from '../../components/Foot.vue'
 import MyTitle from './components/MyTitle.vue'
-import Foot from './components/Foot.vue'
 
 export default {
-  name: 'app',
+  name: 'education',
   components: {
-    MyTitle,Foot
+    Foot,MyTitle
   }
 }
 </script>
 
 <style>
-#app {
+#education {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

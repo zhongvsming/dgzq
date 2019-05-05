@@ -65,7 +65,7 @@
                             </ul>    
                         </li>
                         <li>
-                            <a id="touzizhejiaoyu" href="">投资者教育</a>    
+                            <a id="touzizhejiaoyu" href="/education.html" target="_blank">投资者教育</a>    
                        </li>
                         <li class="nav-relative" @mouseleave="unShowTitleNav('inner-download','ruanjianxiazai')">
                             <a id="ruanjianxiazai" href="" @mouseenter="showTitleNav('inner-download','ruanjianxiazai','list-item')">软件下载</a>
