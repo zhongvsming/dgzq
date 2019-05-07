@@ -78,6 +78,7 @@
 }
 .bottom{
       width: 100%;
+      min-width: 1200px;
       height: 300px;
       background: #242a37;
       .footer-box{

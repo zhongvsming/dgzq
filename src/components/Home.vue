@@ -3,9 +3,9 @@
         
         <!-- 轮播图区域 -->
         <div id="banner" class="banner">
-            <el-carousel height="470px">
+            <el-carousel height="470px" >
                 <el-carousel-item v-for="item in bannerImage" :key="item.url">
-                    <img :src="item.url" alt="图片无法显示">
+                    <img :src="item.url" alt="图片无法显示" width="100%" height="100%">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -247,45 +247,48 @@
     padding:0;
 }
 .home-container{
-
-    .banner{
-        margin-top:70px;
-    }
-    .banner-collapse{
-        margin-top:47px !important;
-    }
-    .index{
-        width: 100%;
-        background: #eee;
-        .index-inner{
-            width: 1200px;
-            margin: 0 auto;
-            ul{
-            @include display-flex(space-between);
-            margin:0;
-                li{
-                    h3{
-                        font-size: 1em;
-                        margin: 0;
-                    }
-                    strong{
-                        display: block;
-                        font-size: 26px;
-                        height: 34px;
-                        line-height: 34px;
+width: 100%;
+.banner{
+    margin:70px auto 0 auto;
+    min-width: 1200px;
+    // width: 100%;
+}
+.banner-collapse{
+    margin-top:47px !important;
+}
+.index{
+    width: 100%;
+    min-width: 1200px;
+    background: #eee;
+    .index-inner{
+        width: 1200px;
+        margin: 0 auto;
+        ul{
+        @include display-flex(space-between);
+        margin:0;
+            li{
+                h3{
+                    font-size: 1em;
+                    margin: 0;
+                }
+                strong{
+                    display: block;
+                    font-size: 26px;
+                    height: 34px;
+                    line-height: 34px;
+                    color: #1caa3d;
+                }
+                .dotAndRate{
+                    span{
+                        display: inline-block;
+                        width: 70px;
                         color: #1caa3d;
                     }
-                    .dotAndRate{
-                        span{
-                            display: inline-block;
-                            width: 70px;
-                            color: #1caa3d;
-                        }
-                    }
                 }
-        }
-        } 
+            }
     }
+    } 
+}
   .notice{
       margin-top:25px;
       ul{
@@ -345,7 +348,7 @@
                       width: 50%;
                       a{
                             font-size: 14px;
-                            // display: block;
+                            color: black;
                         }
                   }
               }
@@ -393,6 +396,7 @@
   }
   .nine{
       width:100%;
+      min-width: 1200px;
     //   background-image:url("../assets/00002.jpg"); 
         background: gray;
         padding-top:50px;
@@ -435,6 +439,7 @@
                       background: #b28147;
                   }
                   p{
+                      color:black;
                       font-size: 14px;
                   }
                   a{
@@ -463,7 +468,9 @@
                       color:white;
                       background: #222;
                     //   transition: all 1s;
-
+                      p{
+                          color: white;
+                      }
                       h4{
                           color: white;
                       }

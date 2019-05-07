@@ -659,6 +659,7 @@
                                 li{
                                     float: none;
                                     h6{
+                                        color:black;
                                         margin:20px 0 5px 0;
                                         max-width: 300px;
                                     }

@@ -65,7 +65,7 @@
                             </ul>    
                         </li>
                         <li>
-                            <a id="touzizhejiaoyu" href="/education.html" target="_blank">投资者教育</a>    
+                            <a id="touzizhejiaoyu" href="/dgzq/education.html" target="_blank">投资者教育</a>    
                        </li>
                         <li class="nav-relative" @mouseleave="unShowTitleNav('inner-download','ruanjianxiazai')">
                             <a id="ruanjianxiazai" href="" @mouseenter="showTitleNav('inner-download','ruanjianxiazai','list-item')">软件下载</a>
@@ -109,7 +109,8 @@
             tCollapse(){
                 var vm = this;
                 document.body.onscroll = function(){
-                    if(document.documentElement.scrollTop>50){
+                    if(document.documentElement.scrollTop>50||document.body.scrollTop>50){
+                        // alert("scroll");
                         if(!vm.titleCollapse){
                             vm.titleCollapse = true;
                         }
@@ -225,6 +226,7 @@
                         li{
                         padding:0 0 0 40px;
                             a{
+                                color:black;
                                 display: block;
                                 font-size: 16px;
                                 padding: 13px 0;
@@ -257,6 +259,7 @@
                             a{
                                 display: block;
                                 padding:0;
+                                color: black;
                                 h4{
                                     text-align: left;
                                     height: 16px;
@@ -301,6 +304,7 @@
                         background: white;
                         z-index: 50;
                         a{
+                            color: black;
                             margin: 0;
                             padding:0;
                             &:hover{
